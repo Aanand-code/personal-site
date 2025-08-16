@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+
+    --font-sofia: "Sofia", cursive, sans-serif;
+    --background-light: #ffffff;
+    --text-light: #000000;
+    --background-dark: rgba(0, 0, 0, 0.97);
+    --text-dark: rgb(255, 255, 255);
+    --border-color-dark: rgb(0, 0, 0, 0.91);
+}
+
+/* Apply theme variables */
+:root {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --border-color: transparent;
+}
+
+.dark {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --border-color: var(--border-color-dark);
+}
+
+/* Base styles */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Delius", "Open Sans", sans-serif;
+    border-right: 4px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-sofia {
+    font-family: var(--font-sofia);
+}
+
+/* Animation keyframes */
+@keyframes typewriter {
+    from {
+        width: 0rem;
+    }
+
+    to {
+        width: 14.75rem;
+    }
+}
+
+@keyframes blinkTextCursor {
+    0% {
+        border-right-color: rgb(99 102 241);
+    }
+
+    10% {
+        border-right-color: transparent;
+    }
+
+    20% {
+        border-right-color: rgb(255, 242, 95);
+    }
+
+    30% {
+        border-right-color: transparent;
+    }
+
+    40% {
+        border-right-color: rgb(255, 95, 242);
+    }
+
+    50% {
+        border-right-color: transparent;
+    }
+
+    60% {
+        border-right-color: rgb(255, 95, 95);
+    }
+
+    70% {
+        border-right-color: transparent;
+    }
+
+    80% {
+        border-right-color: rgb(95, 255, 255);
+    }
+
+    90% {
+        border-right-color: transparent;
+    }
+
+    100% {
+        border-right-color: rgba(139, 255, 100, 0.91);
+    }
+}
+
+/* Animation utility */
+.animate-type-and-blink {
+    animation:
+        typewriter 2s steps(44) 200ms 1 normal both,
+        blinkTextCursor 4s steps(44) 200ms infinite normal both;
+}
+
+/* Theme-aware utilities */
+.bg-theme {
+    background-color: var(--background);
+}
+
+.text-theme {
+    color: var(--text);
+}
+
+.border-theme {
+    border-color: var(--border-color);
+}
+
+.text-size-theme {
+    font-size: 1.125rem;
+    /* lg */
+}
+
+.dark .text-size-theme {
+    font-size: 0.875rem;
+    /* sm */
+}
+
+.contact-links {
+    background-color: #d6d1d1;
+}
+
+.dark .contact-links {
+    background-color: #383636;
+}
+
+.footer-color {
+    color: #6a6767;
+}
+
+.dark .footer-color {
+    color: #cac6c6;
+}
+
+.footer-color:hover {
+    color: #323131;
+}
+
+.dark .footer-color:hover {
+    color: #ffffff;
+}
