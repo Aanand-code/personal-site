@@ -5,7 +5,7 @@ import PhotoCards from '../components/PhotoCards';
 
 const Home = () => {
   return (
-    <div className="grow border-b border-y-green-950">
+    <div className="flex flex-col flex-grow border-b border-y-red-950 lg:border-y-green-950">
       <div className="pl-5 pt-10 w-fit flex flex-col justify-center items-center">
         <h1
           className="font-sofia text-3xl font-normal w-[14.75]
@@ -19,7 +19,7 @@ const Home = () => {
         <Reveal>
           <p className="text-[0.95rem] font-light text-gray-30">
             A student obsessed with how things <i>truly</i> work — grinding
-            daily to earn the title <br />
+            daily to earn the title
             <span className="text-sm opacity-80"> "software engineer"</span>
           </p>
         </Reveal>

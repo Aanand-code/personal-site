@@ -54,8 +54,8 @@ const RecentlyPlayed = () => {
     return <div className="p-4 h-[380px]">No tracks found</div>;
 
   return (
-    <div className="flex flex-row gap-5 p-4 h-[380px]">
-      <div className="w-[50%]">
+    <div className="flex flex-col lg:flex-row gap-5 p-4 h-full">
+      <div className="w-full lg:w-[50%] ">
         {firstTrack && (
           <SongsReveal>
             <div>
@@ -69,7 +69,7 @@ const RecentlyPlayed = () => {
           </SongsReveal>
         )}
       </div>
-      <div className="w-[50%] flex flex-col gap-3">
+      <div className="lg:w-[50%] flex flex-col gap-3">
         {otherTracks.map((trackId, index) => (
           <div key={index}>
             <SongsReveal>

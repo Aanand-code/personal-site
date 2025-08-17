@@ -29,6 +29,10 @@ const Reveal = ({ children }) => {
           scale: 1.02,
           opacity: 1,
         }}
+        whileTap={{
+          scale: 1.02,
+          opacity: 1,
+        }}
       >
         {children}
       </motion.div>

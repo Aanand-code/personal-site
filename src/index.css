@@ -14,13 +14,11 @@
 :root {
     --background: var(--background-light);
     --text: var(--text-light);
-    --border-color: transparent;
 }
 
 .dark {
     --background: var(--background-dark);
     --text: var(--text-dark);
-    --border-color: var(--border-color-dark);
 }
 
 /* Base styles */
@@ -30,8 +28,7 @@ body {
     background-color: var(--background);
     color: var(--text);
     font-family: "Delius", "Open Sans", sans-serif;
-    border-right: 4px solid var(--border-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 1s ease, color 0.3s ease;
 }
 
 .font-sofia {
@@ -51,7 +48,7 @@ body {
 
 @keyframes blinkTextCursor {
     0% {
-        border-right-color: rgb(99 102 241);
+        border-right-color: rgb(67, 70, 255);
     }
 
     10% {
@@ -59,7 +56,7 @@ body {
     }
 
     20% {
-        border-right-color: rgb(255, 242, 95);
+        border-right-color: rgb(255, 239, 63);
     }
 
     30% {
@@ -67,7 +64,7 @@ body {
     }
 
     40% {
-        border-right-color: rgb(255, 95, 242);
+        border-right-color: rgb(255, 59, 239);
     }
 
     50% {
@@ -75,7 +72,7 @@ body {
     }
 
     60% {
-        border-right-color: rgb(255, 95, 95);
+        border-right-color: rgb(30, 255, 0);
     }
 
     70% {
@@ -83,7 +80,7 @@ body {
     }
 
     80% {
-        border-right-color: rgb(95, 255, 255);
+        border-right-color: rgb(0, 255, 255);
     }
 
     90% {
@@ -91,7 +88,7 @@ body {
     }
 
     100% {
-        border-right-color: rgba(139, 255, 100, 0.91);
+        border-right-color: rgb(255, 0, 0);
     }
 }
 
@@ -99,7 +96,7 @@ body {
 .animate-type-and-blink {
     animation:
         typewriter 2s steps(44) 200ms 1 normal both,
-        blinkTextCursor 4s steps(44) 200ms infinite normal both;
+        blinkTextCursor 5s steps(44) 200ms infinite normal both;
 }
 
 /* Theme-aware utilities */
@@ -109,10 +106,6 @@ body {
 
 .text-theme {
     color: var(--text);
-}
-
-.border-theme {
-    border-color: var(--border-color);
 }
 
 .text-size-theme {
@@ -147,4 +140,12 @@ body {
 
 .dark .footer-color:hover {
     color: #ffffff;
+}
+
+.light-text {
+    color: #3b4044
+}
+
+.dark .light-text {
+    color: #a1a3a4
 }

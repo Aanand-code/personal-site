@@ -31,7 +31,7 @@ const photoCards = [
     image: eight,
     date: 'January 2024',
     place: 'Ridge, Shimla',
-    rotation: 'rotate-12 ',
+    rotation: 'rotate-5 lg:rotate-12 ',
   },
 ];
 
@@ -71,7 +71,7 @@ const PhotoCards = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className=" grid grid-cols-4 gap-8"
+        className=" grid grid-cols-2 lg:grid-cols-4 lg:gap-8"
       >
         {photoCards.map((card) => (
           <motion.div
@@ -84,12 +84,17 @@ const PhotoCards = () => {
                 type: 'spring',
               },
             }}
+            whileTap={{
+              rotateY: 180,
+              scale: 0.98,
+              transition: { type: 'spring', stiffness: 300 },
+            }}
             style={{
               transformStyle: 'preserve-3d',
               perspective: '1000px',
               transformOrigin: '50% 50%',
             }}
-            className={`relative h-60 w-60 cursor-pointer ${card.rotation}`}
+            className={`relative h-45 w-45 lg:h-60 lg:w-60 cursor-pointer ${card.rotation}`}
           >
             {/* Front Face (Image) */}
             <motion.div
@@ -121,10 +126,12 @@ const PhotoCards = () => {
               }}
               className=" rounded-lg flex flex-col items-center justify-center border-1 border-emerald-50 bg-stone-900 "
             >
-              <p className="pb-3 font-light text-sm text-blue-100">
+              <p className="pb-3 font-light text-sm text-blue-100 select-none">
                 {card.date}
               </p>
-              <p className="font-light text-xs text-blue-100">{card.place}</p>
+              <p className="font-light text-xs text-blue-100 select-none touch-none">
+                {card.place}
+              </p>
             </motion.div>
           </motion.div>
         ))}

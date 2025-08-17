@@ -8,7 +8,7 @@ const timelines = [
     college: 'Chandigarh Group of Colleges, Jhanjeri',
     university: 'Affiliated to Punjab Technical University, Kapurthala',
     desc: 'got my degree to make my parents proud',
-    color: 'bg-green-500',
+    color: 'bg-fuchsia-600',
   },
   {
     id: 2,
@@ -24,19 +24,21 @@ const timelines = [
 const Timeline = () => {
   return (
     <>
-      <div className="my-5 p-2 flex flex-row gap-2">
-        <div className=" w-[30%] flex justify-center p-4">
-          <h2 className="text-md font-medium">Timeline</h2>
+      <div className="my-5 p-2 flex flex-col lg:flex-row gap-2">
+        <div className="w-full lg:w-[30%] flex lg:justify-center p-4">
+          <h2 className="text-[1.4rem] lg:text-[1rem] lg:ml-0 lg:p-0  font-medium">
+            Timeline
+          </h2>
         </div>
-        <div className=" p-2 w-[70%] flex flex-col">
+        <div className="lg:p-2 w-full lg:w-[70%] flex flex-col">
           {timelines.map((timeline) => (
             <Reveal>
               <div key={timeline.id} className="flex w-full">
-                <div className=" flex flex-row  gap-5 w-full">
+                <div className=" flex flex-row  gap-2 w-full">
                   <div className="flex flex-col items-center">
                     <div className="border-l-gray-700 border-l-1 h-5 "></div>
                     <div
-                      className={`w-[15px] h-[20px] my-0.5 rounded-[50%] border-3 border-gray-800 
+                      className={`w-[20px] lg:w-[15px] h-[25px] lg:h-[20px] my-0.5 rounded-[50%] border-3 border-gray-600 
                       ${timeline.color}`}
                     ></div>
                     <div className="border-l-gray-700 border-l-1 h-full "></div>
@@ -44,7 +46,7 @@ const Timeline = () => {
                   <div className="flex flex-col gap-0.5 mt-2 mb-2 w-full">
                     <div className="flex flex-row justify-between items-center w-full">
                       <h3 className="font-medium text-lg">{timeline.degree}</h3>
-                      <p className="text-xs ">{timeline.from}</p>
+                      <p className="text-xs text-nowrap">{timeline.from}</p>
                     </div>
                     <h4 className="font-medium t text-sm">
                       {timeline.college}
@@ -55,7 +57,7 @@ const Timeline = () => {
                       </h4>
                     </i>
                     <ul className=" ml-2">
-                      <li className="font-light text-sm list-disc text-gray-600/70">
+                      <li className="font-light text-sm list-disc light-text">
                         {timeline.desc}
                       </li>
                     </ul>
