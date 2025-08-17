@@ -8,7 +8,7 @@ const Home = () => {
     <div className="flex flex-col flex-grow border-b border-y-red-950 lg:border-y-green-950">
       <div className="pl-5 pt-10 w-fit flex flex-col justify-center items-center">
         <h1
-          className="font-sofia text-3xl font-normal w-[14.75]
+          className="font-sofia text-3xl font-normal w-[236px]
     border-r-4 border-indigo-500 pr-1 overflow-hidden whitespace-nowrap
     animate-type-and-blink "
         >
