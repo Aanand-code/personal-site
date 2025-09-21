@@ -12,6 +12,52 @@ const Projects = () => {
         <Reveal>
           <a
             className="flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-15 w-full pl-3 lg:pl-0"
+            href="https://car-auction-tau.vercel.app/"
+            target="_blank"
+          >
+            <div className="w-full lg:w-[50%]">
+              <ul>
+                <li className="list-disc font-medium text-lg text-nowrap">
+                  Car Auction WebApp
+                </li>
+              </ul>
+              <p className="font-light text-sm light-text">
+                A real-time car auction web app where users can post cars,
+                upload images, and participate in live bidding. Powered by
+                Socket.io for instant bid updates, countdown timers, and secure
+                JWT authentication for trusted transactions.
+              </p>
+            </div>
+            <div className="flex flex-wrap mt-2 gap-2 w-full lg:w-[60%]">
+              <p className="bg-cyan-600 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                React
+              </p>
+
+              <p className="bg-green-500 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                Node.js
+              </p>
+              <p className="bg-pink-700 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                Socket.io
+              </p>
+
+              <p className="bg-sky-600 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                Tailwind
+              </p>
+              <p className="bg-green-600 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                MongoDB
+              </p>
+              <p className="bg-fuchsia-500 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                JWT
+              </p>
+              <p className="bg-blue-800 py-1.5 px-4 w-fit rounded-2xl text-[0.7rem]">
+                Cloudinary
+              </p>
+            </div>
+          </a>
+        </Reveal>
+        <Reveal>
+          <a
+            className="flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-15 w-full pl-3 lg:pl-0"
             href="https://personal-site-one-puce.vercel.app/"
             target="_blank"
           >
