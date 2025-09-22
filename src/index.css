@@ -38,13 +38,16 @@ body {
 /* Animation keyframes */
 @keyframes typewriter {
     from {
-        width: 0rem;
+        width: 0ch;
     }
 
     to {
-        width: 236px;
+        width: 9ch;
     }
+
+    /* 20 characters */
 }
+
 
 @keyframes blinkTextCursor {
     0% {
